@@ -1,0 +1,74 @@
+{{!< default}}
+
+{{#post}}
+<article class="post type-text" id="{{id}}">
+
+  <div class="clearfix rte">
+
+    <h1 class="title">
+      {{title}}
+    </h1>
+
+    {{content}}
+
+  </div>
+
+  {{#if tags}}
+  <ul class="tags">
+    <li class="tag label">Tags:</li>
+    {{#foreach tags}}
+      <li class="tag"><a href="{{url}}">&#35;{{name}}</a></li>
+    {{/foreach}}
+  </ul>
+  {{/if}}
+
+  <aside class="metadata clearfix">
+
+    <ul class="meta-tools clearfix">
+      <li class="share">
+        <span class="icon">2</span>
+        <div class="pop-up-wrap">
+          <div class="pop-up">
+            <ul class="share-items">
+              <li class="share-item twitter">
+                <a href="https://twitter.com/intent/tweet?url={{url absolute='true'}}" target="_blank">Twitter<span class="icon">t</span></a>
+              </li>
+              <li class="share-item facebook">
+                <a href="https://www.facebook.com/sharer.php?u={{url absolute='true'}}" target="_blank">Facebook<span class="icon">f</span></a>
+              </li>
+              <li class="share-item pinterest">
+                <a href="#" target="_blank">Pinterest<span class="icon">p</span></a>
+              </li>
+              <li class="share-item google">
+                <a href="https://plus.google.com/share?url={{url absolute='true'}}" target="_blank">Google<span class="icon">g</span></a>
+              </li>
+            </ul>
+            <div class="copy-link-wrap">
+              <a data-clipboard-text="{{url absolute='true'}}"><span class="icon">5</span><span class="label">Copy URL</span></a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="details">
+      <a class="timestamp" href="{{url}}">{{date published_at timeago="true"}}</a>
+    </div>
+
+  </aside>
+
+  <!-- Disqus Comments -->
+    <!--<div class="comments">
+          <h2 class="secondary-title">Comments</h2>
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">var disqus_shortname = 'DISQUS SHORTNAME';
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();</script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a class="dsq-brlink" href="http://disqus.com">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>-->
+
+</article>
+{{/post}}

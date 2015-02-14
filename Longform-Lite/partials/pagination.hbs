@@ -1,0 +1,11 @@
+<div id="pagination">
+  <div class="pagination-wrap">
+    <a class="previous {{#if prev}}link{{/if}}" {{#if prev}}href="{{page_url prev}}"{{/if}}>
+      <span>[</span>Newer
+    </a>
+    <span class="status">Page {{page}} of {{pages}}</span>
+    <a class="next {{#if next}}link{{/if}}" {{#if next}}href="{{page_url next}}"{{/if}}>Older
+      <span>]</span>
+    </a>
+  </div>
+</div>
